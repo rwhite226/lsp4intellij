@@ -87,6 +87,6 @@ public class ApplicationUtils {
             }
         };
 
-        ApplicationManager.getApplication().invokeLater(wrapper, (Condition<Void>) value -> false);
+        ApplicationManager.getApplication().executeOnPooledThread(wrapper);
     }
 }
